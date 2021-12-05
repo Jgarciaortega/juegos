@@ -1,0 +1,362 @@
+:root{
+
+    --bg--camino: black;
+    --bg--body: gray;
+    --font--style: Arial Black; 
+
+    
+}
+
+html{
+
+    text-align: left; 
+    font-family: var(--font--style);
+    font-weight: bold; 
+    width: 100%;
+    height: 100%;
+  
+}
+
+
+
+
+body{
+
+    display: grid;
+    justify-content: center;
+    font-size: 40px; 
+    background-image: url("../img/fondo1.png"); 
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+
+}
+
+#header{
+
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 80px;
+    margin-top: 2%;
+    color:red; 
+    text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#score{
+
+    padding-top: 3%;
+}
+
+#lifes{
+
+    padding-top: 11%;
+}
+
+
+.vidas{
+
+    background-image: url("../img/sonicLife.png"); 
+    background-size: 60% 80%; 
+    background-repeat: no-repeat	
+}
+
+#mapa{
+
+    display: grid;
+    grid-template-columns: repeat(21, 1fr);
+    grid-template-rows: repeat(14, 1fr);
+    width: 1400px;
+    height: 820px;
+    
+}
+
+.camino{
+
+    background-image: url("../img/ring.png");
+    background-size: 100% 100%;
+	background-color:black; 	
+    background-blend-mode: lighten, normal;
+   
+
+}
+
+.caminoPisado{
+
+    background: var(--bg--camino);
+
+}
+
+.gameOver{
+
+    display:flex;
+    justify-content: flex-end;
+    grid-template-rows: 2fr;
+    background-image: url("../img/gameOver.png") !important;
+    width: 850px;
+    height: 500px;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 250px;
+    left: 530px;
+    background-color: black;
+    background-blend-mode: lighten, normal;
+    border: 4px solid red;
+   
+    
+}
+
+.flecha{
+
+
+    background-image: url("../img/flecha.png");
+    background-size: 100% 100%;
+	background-color: black; 	
+    background-blend-mode: lighten, normal;
+    
+
+}
+
+.gameOver p{
+
+  align-self: flex-end;
+  color: whitesmoke; 
+  font-size: 20px;
+  padding-right: 2%;
+
+  
+}
+
+.parpadea {
+  
+    animation-name: parpadeo;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  
+    -webkit-animation-name:parpadeo;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+  }
+  
+  @-moz-keyframes parpadeo{  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+  
+  @-webkit-keyframes parpadeo {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+  }
+  
+  @keyframes parpadeo {  
+    0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+
+.door{
+  
+	background-color:black; 	 
+    border: 4px solid rgb(77, 55, 55);
+
+}
+
+.doorClose{
+
+    background-image: url("../img/puerta.jpg");
+    background-size: 100% 100%;
+	background-color: black; 	
+    background-blend-mode: lighten, normal;
+    border: 1px solid gray;
+}
+
+
+.columnaLlave{
+
+    background-image: url("../img/key.gif");
+    background-size: 100% 100%;
+	background-color: black; 	
+    background-blend-mode: lighten, normal;
+    border: 1px solid gray;
+    
+}
+
+.columnaPergamino{
+
+    background-image: url("../img/arma.gif");
+    background-size: 100% 100%;
+	background-color:  black;
+	background-blend-mode: lighten, normal;
+    border: 1px solid gray;
+}
+
+.columnaVillano{
+
+    background-image: url("../img/eggman.gif");
+    background-size: 100% 100%;
+	background-color:  black;	
+	background-blend-mode: lighten, normal;
+    border: 1px solid gray;
+}
+
+.columnaEsmeralda{
+
+    background-image: url("../img/esmeralda.gif");
+    background-size: 100% 100%;
+	background-color: black;
+    background-blend-mode: lighten, normal;
+    border: 1px solid gray;
+    
+}
+
+.columnaNada{
+
+   background-image: url("../img/negacion2.gif");
+   background-size: 100% 100%;
+	background-color:  black;
+    background-blend-mode: lighten, normal;
+    border: 1px solid gray;
+}
+
+
+.columna{
+
+    background-image: url("../img/muro.png");
+   background-size: 100% 100%;
+	background-color:black; 	
+	background-blend-mode: lighten, normal;
+   
+}
+
+
+
+.sonicStatic{
+
+    background-image: url("../img/sonicStatic.png");
+    background-size: 100% 100%;
+	background-color:black; 	
+	background-blend-mode: lighten, normal;
+
+}
+
+.sonicLeft{
+
+    background-image: url("../img/sonicLeft.gif");
+    background-size: 100% 100%;
+	
+    
+} 
+
+.sonicRight{
+
+    background-image: url("../img/sonicRight.gif");
+    background-size: 100% 100%;
+	
+    
+} 
+
+.sonicUp{
+
+    background-image: url("../img/sonicUp.gif");
+    background-size: 100% 100%;
+	
+    
+} 
+
+.sonicDown{
+
+    background-image: url("../img/sonicDown.gif");
+    background-size: 100% 100%;
+	
+    
+} 
+.eggmanStatic{
+
+    background-image: url("../img/eggman.png");
+    background-size: 100% 100%;
+    background-color:black; 	
+	background-blend-mode: lighten, normal;
+    
+}
+
+.eggmanDown{
+
+    background-image: url("../img/eggmanDown.gif");
+    background-size: 100% 100%;
+    background-color:black; 	
+	background-blend-mode: lighten, normal;
+    
+}
+
+.eggmanUp{
+
+    background-image: url("../img/eggmanUp.gif");
+    background-size: 100% 100%;
+    background-color:black; 	
+	background-blend-mode: lighten, normal;
+    
+}
+
+.eggmanRight{
+
+    background-image: url("../img/eggmanRight.gif");
+    background-size: 100% 100%;
+    background-color:black; 	
+	background-blend-mode: lighten, normal;
+    
+}
+
+.eggmanLeft{
+
+    background-image: url("../img/eggmanLeft.gif");
+    background-size: 100% 100%;
+    background-color:black; 	
+	background-blend-mode: lighten, normal;
+    
+}
+
+.eggmanDownAlerta{
+
+    background-image: url("../img/eggmanDownAlerta.gif");
+    background-size: 100% 100%;
+    background-color:black; 	
+	background-blend-mode: lighten, normal;
+    
+}
+
+.eggmanUpAlerta{
+
+    background-image: url("../img/eggmanUpAlerta.gif");
+    background-size: 100% 100%;
+    background-color:black; 	
+	background-blend-mode: lighten, normal;
+    
+}
+
+.eggmanRightAlerta{
+
+    background-image: url("../img/eggmanRightAlerta.gif");
+    background-size: 100% 100%;
+    background-color:black; 	
+	background-blend-mode: lighten, normal;
+    
+}
+
+.eggmanLeftAlerta{
+
+    background-image: url("../img/eggmanLeftAlerta.gif");
+    background-size: 100% 100%;
+    background-color:black; 	
+	background-blend-mode: lighten, normal;
+    
+}
+
+
+
+
+
