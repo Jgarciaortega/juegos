@@ -8,7 +8,7 @@ var estadoColumnas = [];
 //BOOLEAN PARA ABRIR PUERTA SALIDA
 var salida = true;
 
-//POSICION INICIAL JUGADOR
+//POSICION INICIAL JUGADOR //
 var x = 8;
 var y = 0;
 var direccion = "Static";
